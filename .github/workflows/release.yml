@@ -31,7 +31,7 @@ jobs:
             dep ensure
         fi
     - name: Build
-      run: cd easyDoser-server/ && go build -v .
+      run: cd easyDoser-server/ && go build -v -o ../output .
     - uses: actions/checkout@v2
     - name: Use Node.js 14.x
       uses: actions/setup-node@v1
@@ -42,7 +42,7 @@ jobs:
     - name: make  output dir 
       run: mkdir output && mkdir output/frontend
     - name: copy output
-      run: ls easyDoser-server && cp easyDoser-server/easyDoser-server output && cp -r easyDoser-frontend/build output/frontend
+      run: cp -r easyDoser-frontend/build output/frontend
     - uses: montudor/action-zip@v0.1.0
       with:
         args: zip -qq -r release.zip output
