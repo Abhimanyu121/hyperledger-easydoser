@@ -31,7 +31,7 @@ jobs:
             dep ensure
         fi
     - name: Build
-      run: cd easyDoser-server/ && go build -v . && cp easyDoser-server ../output
+      run: cd easyDoser-server/ && go build -v . && cp easyDoser-server ../output && ls ../output
     - uses: actions/checkout@v2
     - name: Use Node.js 14.x
       uses: actions/setup-node@v1
