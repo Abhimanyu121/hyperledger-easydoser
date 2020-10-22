@@ -32,13 +32,13 @@ jobs:
         fi
     - name: Build
       run: cd easyDoser-server/ && go build -v .
-    - name: Upload the artifacts
-      uses: skx/github-action-publish-binaries@master
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Upload binaries to release
+      uses: svenstaro/upload-release-action@v2
       with:
-        releaseId: '0.2'
-        args: 'easyDoser-server/easyDoser-server'
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        file: easyDoser-server/easyDoser-server
+        asset_name: easyDoser-server
+        tag: 0.2
 
     - uses: actions/checkout@v2
     - name: Use Node.js 14.x
