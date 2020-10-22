@@ -42,7 +42,7 @@ jobs:
     - name: make  output dir 
       run: mkdir output && mkdir output/frontend
     - name: copy output
-      run: cp easyDoser-server/easyDoser-server output && cp -r easyDoser-frontend/build output/frontend
+      run: ls easyDoser-server/easyDoser-server/ && cp easyDoser-server/easyDoser-server output && cp -r easyDoser-frontend/build output/frontend
     - uses: montudor/action-zip@v0.1.0
       with:
         args: zip -qq -r release.zip output
