@@ -38,7 +38,7 @@ jobs:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         file: easyDoser-server/easyDoser-server
         asset_name: easyDoser-server
-        tag: 0.2
+        tag: 0.3
 
     - uses: actions/checkout@v2
     - name: Use Node.js 14.x
@@ -53,4 +53,4 @@ jobs:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         file: easyDoser-frontend/build
         asset_name: easyDoser-server
-        tag: 0.2
+        tag: 0.3
