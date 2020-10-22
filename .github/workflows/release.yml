@@ -47,8 +47,8 @@ jobs:
     - run: cd easyDoser-frontend && rm -rf node_modules && rm -rf package-lock.json && npm install
     - run: cd easyDoser-frontend && npm run build --if-present
     - name: Upload the artifacts
-        uses: skx/github-action-publish-binaries@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          args: 'easyDoser-frontend/build'
+      uses: skx/github-action-publish-binaries@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        args: 'easyDoser-frontend/build'
