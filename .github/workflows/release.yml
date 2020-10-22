@@ -52,4 +52,4 @@ jobs:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         file: release.zip
         asset_name: easyDoser
-        tag: 0.4
+        tag: 0.5
