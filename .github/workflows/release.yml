@@ -51,7 +51,7 @@ jobs:
     - name: ls
       run: ls output
     - name: ls
-      run: ls easyDoser
+      run: ls easyDoser-server
     - name: ls
       run: ls 
     - name: Upload binaries to release
