@@ -44,7 +44,6 @@ jobs:
     #     tag: 0.8
     # - name: cp  
     #   run: cp easyDoser-server/easyDoser-server ../output 
-    - uses: actions/checkout@v2
     - name: Use Node.js 14.x
       uses: actions/setup-node@v1
       with:
