@@ -35,40 +35,21 @@ jobs:
         fi
     - name: Build
       run: cd easyDoser-server/ && go build -o server && cp server ../output/
-    # - name: Upload binaries to release
-    #   uses: svenstaro/upload-release-action@v2
-    #   with:
-    #     repo_token: ${{ secrets.GITHUB_TOKEN }}
-    #     file: easyDoser-server/server
-    #     asset_name: easyDoser-server
-    #     tag: 0.8
-    # - name: cp  
-    #   run: cp easyDoser-server/easyDoser-server ../output 
     - name: Use Node.js 14.x
       uses: actions/setup-node@v1
       with:
         node-version: 14.x
     - run: cd easyDoser-frontend && rm -rf node_modules && rm -rf package-lock.json && npm install
     - run: cd easyDoser-frontend && npm run build --if-present
-    # - name: make  output dir 
-    #   run: mkdir output/frontend
-    - name: pwd
-      run: ls && pwd
     - name: copy output
       run: cp -r easyDoser-frontend/build output/frontend
     - uses: montudor/action-zip@v0.1.0
       with:
         args: zip -qq -r release.zip output
-    - name: ls
-      run: ls output
-    - name: ls
-      run: ls easyDoser-server
-    - name: ls
-      run: ls 
     - name: Upload binaries to release
       uses: svenstaro/upload-release-action@v2
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         file: release.zip
         asset_name: easyDoser.zip
-        tag: 0.9
+        tag: 1.0
