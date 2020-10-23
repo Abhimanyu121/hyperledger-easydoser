@@ -21,7 +21,8 @@ jobs:
 
     - name: Check out code into the Go module directory
       uses: actions/checkout@v2
-
+    - name: make  output dir 
+      run: mkdir output
     - name: Get dependencies
       run: |
         cd easyDoser-server/
@@ -49,7 +50,7 @@ jobs:
     - run: cd easyDoser-frontend && rm -rf node_modules && rm -rf package-lock.json && npm install
     - run: cd easyDoser-frontend && npm run build --if-present
     - name: make  output dir 
-      run: mkdir output && mkdir output/frontend
+      run: mkdir output/frontend
     - name: copy output
       run: cp -r easyDoser-frontend/build output/frontend
     - uses: montudor/action-zip@v0.1.0
