@@ -24,7 +24,7 @@ jobs:
     - name: make  output dir 
       run: mkdir output
     - name: ls
-      run: ls
+      run: ls && pwd
     - name: Get dependencies
       run: |
         cd easyDoser-server/
