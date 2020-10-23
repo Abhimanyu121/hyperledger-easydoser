@@ -51,6 +51,8 @@ jobs:
     - name: ls
       run: ls output
     - name: ls
+      run: ls easyDoser
+    - name: ls
       run: ls 
     - name: Upload binaries to release
       uses: svenstaro/upload-release-action@v2
