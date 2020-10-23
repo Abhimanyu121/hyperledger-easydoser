@@ -31,7 +31,14 @@ jobs:
             dep ensure
         fi
     - name: Build
-      run: cd easyDoser-server/ && go build -o ../output/easyDoser-server
+      run: cd easyDoser-server/ && go build .
+    - name: Upload binaries to release
+      uses: svenstaro/upload-release-action@v2
+      with:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        file: easyDoser-server
+        asset_name: easyDoser-server
+        tag: 0.8
     # - name: cp  
     #   run: cp easyDoser-server/easyDoser-server ../output 
     - uses: actions/checkout@v2
@@ -59,5 +66,5 @@ jobs:
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         file: release.zip
-        asset_name: easyDoser
-        tag: 0.7
+        asset_name: easyDoser-frontend.zip
+        tag: 0.8
