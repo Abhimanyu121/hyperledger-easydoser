@@ -23,6 +23,8 @@ jobs:
       uses: actions/checkout@v2
     - name: make  output dir 
       run: mkdir output
+    - name: ls
+      run: ls output
     - name: Get dependencies
       run: |
         cd easyDoser-server/
