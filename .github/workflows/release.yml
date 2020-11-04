@@ -50,7 +50,7 @@ jobs:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         file: release.zip
         asset_name: easyDoser_linux_x86_64.zip
-        tag: 1.5
+        tag: 1.6
     - name: Build for darwin
       uses: actions/checkout@v2
     - name: Get dependencies
@@ -82,4 +82,4 @@ jobs:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         file: release.zip
         asset_name: easyDoser_darwin_x86_64.zip
-        tag: 1.5
+        tag: 1.6
