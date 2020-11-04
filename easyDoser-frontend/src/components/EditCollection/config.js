@@ -11,6 +11,8 @@ import CardFooter from "components/Card/CardFooter.js";
 import * as escapeJSON from "escape-json-node";
 import {approveConfig} from "api/api"
 import Checkbox from '@material-ui/core/Checkbox';
+import { Alert } from '@material-ui/lab';
+import { AlertTitle } from '@material-ui/lab';
 
 import "./config.css"
 export default function CConfig (props) {
@@ -143,10 +145,18 @@ export default function CConfig (props) {
               >
                 Approve
               </Button>
-              <CardFooter>
-              {status?(<text>
-                {resp.status}
-              </text>):(<text>
+              <CardFooter> 
+              {status?(<div>
+                {resp.status==="done"?
+                <Alert severity="success">
+                  <AlertTitle>Approved</AlertTitle>
+                  Your Changes are approved
+                </Alert>:
+                  <Alert severity="error">
+                  <AlertTitle>Failed</AlertTitle>
+                  {resp.status}
+                </Alert>
+                }</div>):(<text>
 
               </text>)}
             </CardFooter>

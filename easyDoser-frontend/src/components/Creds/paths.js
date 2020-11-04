@@ -302,7 +302,7 @@ export default function Paths(props) {
               </GridContainer>
               <br/>
               <Checkbox
-                defaultChecked
+              defaultChecked
                 onChange = {handleCheck}
                 color="primary"
                 inputProps={{ 'aria-label': 'secondary checkbox' }}
@@ -321,7 +321,7 @@ export default function Paths(props) {
                       <FormTextarea
                         className="address"
                         id="#description"
-                        placeholder="Collection Policy"
+                        placeholder={cookies.get(cfg)===undefined?"Orderer Address":cookies.get(cfg)}
                         style={{height: '40px', width:"500px"}}
                         onChange={(e) => {
                           setCfg(e.target.value)
@@ -351,7 +351,7 @@ export default function Paths(props) {
                       <FormTextarea
                         className="address"
                         id="#description"
-                        placeholder="Collection Policy"
+                        placeholder={cookies.get(mspconf)===undefined?"Orderer Address":cookies.get(mspconf)}
                         style={{height: '40px', width:"500px"}}
                         onChange={(e) => {
                           setMspconf(e.target.value)
