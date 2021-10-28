@@ -19,11 +19,11 @@
 
 
 ## UI (Web) requirements
-TODO
+REACT based UI to see everything
 
 
 ## CI requirements
-TODO
+Github actions to push builds at every version bump
 
 ## Testing requirements
-TODO
+Test cases
