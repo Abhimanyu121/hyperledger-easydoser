@@ -19,10 +19,10 @@ hyperledger/fabric-samples/test-network|master ⇒
 ```
 3. Make sure you have path to fabric binaries in your env PATH variable.
 ## Run Project with release files.
-1. Install npm, you can find instructions [here.](https://www.npmjs.com/get-npm)
-2. Install serve with `npm install -g serve`
+1. Install npm, you can find instructions [here.](https://www.npmjs.com/get-npm).
+2. Install serve with `npm install -g serve`.
 3. Download latest release zip from [release section of the repo](https://github.com/Abhimanyu121/hyperledger-easydoser/releases/).
-4. Extract the zip and inside the extract directory run `./start.sh`
+4. Extract the zip and inside the extract directory run `./start.sh`.
 5. To stop, simply press ctrl+c twice.
 ## Instructions to run the project without docker
 1. Clone the repo and go to easydoser dir.
@@ -36,7 +36,7 @@ hyperledger/fabric-samples/test-network|master ⇒
     - `npm start`
 3. In frontend set absolute path of Core Config dir and MspConfig dir, set addresses of Orderer and peer and finally pick the given files.
 4. Untick running on docker and provide additional information.
-5. Save the details and check channel policies
+5. Save the details and check channel policies.
 ## Instructions to run the project with docker
 1. Clone the repo and go to easydoser dir.
 2. Run the following (make sure you are root user to interact with docker deamon)
